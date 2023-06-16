@@ -36,6 +36,11 @@ if (modifyButton) {
             location.replace("/articles/" + id);
         }
 
+        function fail() {
+            alert("수정 실패했습니다.");
+            location.replace("/articles/" + id);
+        }
+
         httpRequest("PUT", "/api/articles/" + id, body, success, fail);
     });
 }
@@ -102,7 +107,7 @@ function httpRequest(method, url, body, success, fail) {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    refresh_token: getCookie("refresh_token"),
+                    refreshToken: getCookie("refresh_token"),
                 }),
             }).then((res) => {
                 if (res.ok) {
