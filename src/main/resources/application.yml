@@ -15,6 +15,17 @@ spring :
     console:
       enabled: true
 
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ...
+            client-secret: ...
+            scope:
+              - email
+              - profile
+
 jwt:
   issuer: ajufresh@gmail.com
   secret_key: jgfoqw3jg0239jg432jg348gyuq3g9y3q47ghq349gh3hg9ehygyhgw2hgtj12q9pthy1289y278t5
