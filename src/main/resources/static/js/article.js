@@ -59,6 +59,7 @@ if (createButton) {
             location.replace("/articles");
         }
 
+        httpRequest("POST", "/api/articles", body, success, fail);
 
     })
 }
